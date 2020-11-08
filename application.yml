@@ -5,7 +5,7 @@ spring:
     lifecycle:
         timeout-per-shutdown-phase: 1m
     devtools:
-        add-properties: off
+        add-properties: false
 
 management:
     health.diskspace.enabled: false
