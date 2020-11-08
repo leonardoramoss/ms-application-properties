@@ -1,2 +1,25 @@
 server:
     shutdown: graceful
+
+spring:
+    main:
+        banner-mode: off
+    lifecycle:
+        timeout-per-shutdown-phase: 1m
+
+management:
+    health.diskspace.enabled: false
+    endpoint:
+        health:
+            probes:
+                enabled: true
+            show-details: always
+    endpoints.web.base-path: '/'
+
+info:
+    application:
+        name: ${spring.application.name}
+    java:
+        vendor: ${java.specification.vendor}
+        vm-name: ${java.vm.name}
+        runtime-version: ${java.runtime.version}
